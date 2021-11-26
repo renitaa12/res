@@ -1,14 +1,23 @@
 kind: pipeline
-type: ssh
+type: docker
 name: default
 
-server:
-  host: 35.74.27.106
-  user: ubuntu
-  ssh_key:
-    from_secret: ssh_key
+platform:
+  os: linux
+  arch: arm64
 
 steps:
-- name: greetings
+
+- name: test
+  image: gradle:jdk17
   commands:
-  - echo hello world !!
+  - gradle build
+
+- name: coverage
+  image: plugins/codecov
+  settings:
+    token: 
+      from_secret: CODECOV_TOKEN
+    required: true
+    files:
+      - "*.xml"
